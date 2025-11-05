@@ -8,4 +8,12 @@ class Channel {
     required this.logoUrl,
     required this.streamUrl,
   });
+
+  factory Channel.fromJson(Map<String, dynamic> json) {
+    return Channel(
+      name: json['name'] as String,
+      logoUrl: json['logo_url'] as String,
+      streamUrl: json['stream_url'] as String,
+    );
+  }
 }
